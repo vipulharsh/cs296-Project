@@ -1,8 +1,8 @@
-/users/ug11/yadavalok/cs296_base_code/obj/main.o: \
- /users/ug11/yadavalok/cs296_base_code/src/main.cpp \
- /users/ug11/yadavalok/cs296_base_code/src/render.hpp \
- /users/ug11/yadavalok/cs296_base_code/external/include/Box2D/Box2D.h \
- /users/ug11/yadavalok/cs296_base_code/external/include/Box2D/Common/b2Settings.h \
+/users/ug11/yadavalok/cs296-Project/cs296_base_code/obj/main.o: \
+ /users/ug11/yadavalok/cs296-Project/cs296_base_code/src/main.cpp \
+ /users/ug11/yadavalok/cs296-Project/cs296_base_code/src/render.hpp \
+ /users/ug11/yadavalok/cs296-Project/cs296_base_code/external/include/Box2D/Box2D.h \
+ /users/ug11/yadavalok/cs296-Project/cs296_base_code/external/include/Box2D/Common/b2Settings.h \
  /usr/include/c++/4.4/cassert /usr/include/assert.h \
  /usr/include/features.h /usr/include/bits/predefs.h \
  /usr/include/sys/cdefs.h /usr/include/bits/wordsize.h \
@@ -18,18 +18,18 @@
  /usr/include/bits/nan.h /usr/include/bits/mathdef.h \
  /usr/include/bits/mathcalls.h /usr/include/bits/mathinline.h \
  /usr/include/c++/4.4/bits/cmath.tcc \
- /users/ug11/yadavalok/cs296_base_code/external/include/Box2D/Common/b2Draw.h \
- /users/ug11/yadavalok/cs296_base_code/external/include/Box2D/Common/b2Math.h \
+ /users/ug11/yadavalok/cs296-Project/cs296_base_code/external/include/Box2D/Common/b2Draw.h \
+ /users/ug11/yadavalok/cs296-Project/cs296_base_code/external/include/Box2D/Common/b2Math.h \
  /usr/include/c++/4.4/cfloat \
  /usr/lib/gcc/i486-linux-gnu/4.4.3/include/float.h \
  /usr/include/c++/4.4/cstddef \
  /usr/lib/gcc/i486-linux-gnu/4.4.3/include/stddef.h \
  /usr/include/c++/4.4/limits \
- /users/ug11/yadavalok/cs296_base_code/external/include/Box2D/Common/b2Timer.h \
- /users/ug11/yadavalok/cs296_base_code/external/include/Box2D/Collision/Shapes/b2CircleShape.h \
- /users/ug11/yadavalok/cs296_base_code/external/include/Box2D/Collision/Shapes/b2Shape.h \
- /users/ug11/yadavalok/cs296_base_code/external/include/Box2D/Common/b2BlockAllocator.h \
- /users/ug11/yadavalok/cs296_base_code/external/include/Box2D/Collision/b2Collision.h \
+ /users/ug11/yadavalok/cs296-Project/cs296_base_code/external/include/Box2D/Common/b2Timer.h \
+ /users/ug11/yadavalok/cs296-Project/cs296_base_code/external/include/Box2D/Collision/Shapes/b2CircleShape.h \
+ /users/ug11/yadavalok/cs296-Project/cs296_base_code/external/include/Box2D/Collision/Shapes/b2Shape.h \
+ /users/ug11/yadavalok/cs296-Project/cs296_base_code/external/include/Box2D/Common/b2BlockAllocator.h \
+ /users/ug11/yadavalok/cs296-Project/cs296_base_code/external/include/Box2D/Collision/b2Collision.h \
  /usr/include/c++/4.4/climits \
  /usr/lib/gcc/i486-linux-gnu/4.4.3/include-fixed/limits.h \
  /usr/lib/gcc/i486-linux-gnu/4.4.3/include-fixed/syslimits.h \
@@ -37,12 +37,12 @@
  /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
  /usr/include/bits/posix2_lim.h /usr/include/bits/xopen_lim.h \
  /usr/include/bits/stdio_lim.h \
- /users/ug11/yadavalok/cs296_base_code/external/include/Box2D/Collision/Shapes/b2EdgeShape.h \
- /users/ug11/yadavalok/cs296_base_code/external/include/Box2D/Collision/Shapes/b2ChainShape.h \
- /users/ug11/yadavalok/cs296_base_code/external/include/Box2D/Collision/Shapes/b2PolygonShape.h \
- /users/ug11/yadavalok/cs296_base_code/external/include/Box2D/Collision/b2BroadPhase.h \
- /users/ug11/yadavalok/cs296_base_code/external/include/Box2D/Collision/b2DynamicTree.h \
- /users/ug11/yadavalok/cs296_base_code/external/include/Box2D/Common/b2GrowableStack.h \
+ /users/ug11/yadavalok/cs296-Project/cs296_base_code/external/include/Box2D/Collision/Shapes/b2EdgeShape.h \
+ /users/ug11/yadavalok/cs296-Project/cs296_base_code/external/include/Box2D/Collision/Shapes/b2ChainShape.h \
+ /users/ug11/yadavalok/cs296-Project/cs296_base_code/external/include/Box2D/Collision/Shapes/b2PolygonShape.h \
+ /users/ug11/yadavalok/cs296-Project/cs296_base_code/external/include/Box2D/Collision/b2BroadPhase.h \
+ /users/ug11/yadavalok/cs296-Project/cs296_base_code/external/include/Box2D/Collision/b2DynamicTree.h \
+ /users/ug11/yadavalok/cs296-Project/cs296_base_code/external/include/Box2D/Common/b2GrowableStack.h \
  /usr/include/c++/4.4/cstring /usr/include/string.h \
  /usr/include/xlocale.h /usr/include/bits/string3.h \
  /usr/include/c++/4.4/algorithm /usr/include/c++/4.4/bits/stl_algobase.h \
@@ -71,34 +71,34 @@
  /usr/include/c++/4.4/bits/stl_construct.h /usr/include/c++/4.4/new \
  /usr/include/c++/4.4/exception \
  /usr/include/c++/4.4/bits/stl_uninitialized.h \
- /users/ug11/yadavalok/cs296_base_code/external/include/Box2D/Collision/b2Distance.h \
- /users/ug11/yadavalok/cs296_base_code/external/include/Box2D/Collision/b2TimeOfImpact.h \
- /users/ug11/yadavalok/cs296_base_code/external/include/Box2D/Dynamics/b2Body.h \
+ /users/ug11/yadavalok/cs296-Project/cs296_base_code/external/include/Box2D/Collision/b2Distance.h \
+ /users/ug11/yadavalok/cs296-Project/cs296_base_code/external/include/Box2D/Collision/b2TimeOfImpact.h \
+ /users/ug11/yadavalok/cs296-Project/cs296_base_code/external/include/Box2D/Dynamics/b2Body.h \
  /usr/include/c++/4.4/memory /usr/include/c++/4.4/bits/allocator.h \
  /usr/include/c++/4.4/i486-linux-gnu/bits/c++allocator.h \
  /usr/include/c++/4.4/ext/new_allocator.h \
  /usr/include/c++/4.4/bits/stl_raw_storage_iter.h \
  /usr/include/c++/4.4/backward/auto_ptr.h \
- /users/ug11/yadavalok/cs296_base_code/external/include/Box2D/Dynamics/b2Fixture.h \
- /users/ug11/yadavalok/cs296_base_code/external/include/Box2D/Dynamics/b2WorldCallbacks.h \
- /users/ug11/yadavalok/cs296_base_code/external/include/Box2D/Dynamics/b2TimeStep.h \
- /users/ug11/yadavalok/cs296_base_code/external/include/Box2D/Dynamics/b2World.h \
- /users/ug11/yadavalok/cs296_base_code/external/include/Box2D/Common/b2StackAllocator.h \
- /users/ug11/yadavalok/cs296_base_code/external/include/Box2D/Dynamics/b2ContactManager.h \
- /users/ug11/yadavalok/cs296_base_code/external/include/Box2D/Dynamics/Contacts/b2Contact.h \
- /users/ug11/yadavalok/cs296_base_code/external/include/Box2D/Dynamics/Joints/b2DistanceJoint.h \
- /users/ug11/yadavalok/cs296_base_code/external/include/Box2D/Dynamics/Joints/b2Joint.h \
- /users/ug11/yadavalok/cs296_base_code/external/include/Box2D/Dynamics/Joints/b2FrictionJoint.h \
- /users/ug11/yadavalok/cs296_base_code/external/include/Box2D/Dynamics/Joints/b2GearJoint.h \
- /users/ug11/yadavalok/cs296_base_code/external/include/Box2D/Dynamics/Joints/b2WheelJoint.h \
- /users/ug11/yadavalok/cs296_base_code/external/include/Box2D/Dynamics/Joints/b2MouseJoint.h \
- /users/ug11/yadavalok/cs296_base_code/external/include/Box2D/Dynamics/Joints/b2PrismaticJoint.h \
- /users/ug11/yadavalok/cs296_base_code/external/include/Box2D/Dynamics/Joints/b2PulleyJoint.h \
- /users/ug11/yadavalok/cs296_base_code/external/include/Box2D/Dynamics/Joints/b2RevoluteJoint.h \
- /users/ug11/yadavalok/cs296_base_code/external/include/Box2D/Dynamics/Joints/b2RopeJoint.h \
- /users/ug11/yadavalok/cs296_base_code/external/include/Box2D/Dynamics/Joints/b2WeldJoint.h \
- /users/ug11/yadavalok/cs296_base_code/src/cs296_base.hpp \
- /users/ug11/yadavalok/cs296_base_code/src/callbacks.hpp \
+ /users/ug11/yadavalok/cs296-Project/cs296_base_code/external/include/Box2D/Dynamics/b2Fixture.h \
+ /users/ug11/yadavalok/cs296-Project/cs296_base_code/external/include/Box2D/Dynamics/b2WorldCallbacks.h \
+ /users/ug11/yadavalok/cs296-Project/cs296_base_code/external/include/Box2D/Dynamics/b2TimeStep.h \
+ /users/ug11/yadavalok/cs296-Project/cs296_base_code/external/include/Box2D/Dynamics/b2World.h \
+ /users/ug11/yadavalok/cs296-Project/cs296_base_code/external/include/Box2D/Common/b2StackAllocator.h \
+ /users/ug11/yadavalok/cs296-Project/cs296_base_code/external/include/Box2D/Dynamics/b2ContactManager.h \
+ /users/ug11/yadavalok/cs296-Project/cs296_base_code/external/include/Box2D/Dynamics/Contacts/b2Contact.h \
+ /users/ug11/yadavalok/cs296-Project/cs296_base_code/external/include/Box2D/Dynamics/Joints/b2DistanceJoint.h \
+ /users/ug11/yadavalok/cs296-Project/cs296_base_code/external/include/Box2D/Dynamics/Joints/b2Joint.h \
+ /users/ug11/yadavalok/cs296-Project/cs296_base_code/external/include/Box2D/Dynamics/Joints/b2FrictionJoint.h \
+ /users/ug11/yadavalok/cs296-Project/cs296_base_code/external/include/Box2D/Dynamics/Joints/b2GearJoint.h \
+ /users/ug11/yadavalok/cs296-Project/cs296_base_code/external/include/Box2D/Dynamics/Joints/b2WheelJoint.h \
+ /users/ug11/yadavalok/cs296-Project/cs296_base_code/external/include/Box2D/Dynamics/Joints/b2MouseJoint.h \
+ /users/ug11/yadavalok/cs296-Project/cs296_base_code/external/include/Box2D/Dynamics/Joints/b2PrismaticJoint.h \
+ /users/ug11/yadavalok/cs296-Project/cs296_base_code/external/include/Box2D/Dynamics/Joints/b2PulleyJoint.h \
+ /users/ug11/yadavalok/cs296-Project/cs296_base_code/external/include/Box2D/Dynamics/Joints/b2RevoluteJoint.h \
+ /users/ug11/yadavalok/cs296-Project/cs296_base_code/external/include/Box2D/Dynamics/Joints/b2RopeJoint.h \
+ /users/ug11/yadavalok/cs296-Project/cs296_base_code/external/include/Box2D/Dynamics/Joints/b2WeldJoint.h \
+ /users/ug11/yadavalok/cs296-Project/cs296_base_code/src/cs296_base.hpp \
+ /users/ug11/yadavalok/cs296-Project/cs296_base_code/src/callbacks.hpp \
  /usr/include/GL/glui.h /usr/include/GL/glut.h \
  /usr/include/GL/freeglut_std.h /usr/include/GL/gl.h \
  /usr/include/GL/glext.h /usr/include/inttypes.h /usr/include/stdint.h \
