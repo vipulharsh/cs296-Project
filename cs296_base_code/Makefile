@@ -21,6 +21,9 @@ SRCDIR = $(PROJECT_ROOT)/src
 OBJDIR = $(PROJECT_ROOT)/obj
 BINDIR = $(PROJECT_ROOT)/bin
 DOCDIR = $(PROJECT_ROOT)/doc
+SCRIPTDIR =$(PROJECT_ROOT)/scripts
+INSTALL_PATH=$(PROJECT_ROOT)/install
+
 
 # Library Paths
 BOX2D_ROOT=$(EXTERNAL_ROOT)
@@ -65,8 +68,15 @@ setup:
 	@$(ECHO) "Setting up compilation..."
 	@mkdir -p obj
 	@mkdir -p bin
+	@mkdir -p data
+	@mkdir -p plots
 
-$(BINDIR)/$(TARGET): $(OBJS)
+
+
+exe: all
+
+
+$(BINDIR)/$(TARGET): $(EXTERNAL_ROOT)/lib/libBox2D.a $(OBJS)
 	@$(PRINTF) "$(MESG_COLOR)Building executable:$(NO_COLOR) $(FILE_COLOR) %16s$(NO_COLOR)" "$(notdir $@)"
 	@$(CC) -o $@ $(LDFLAGS) $(OBJS) $(LIBS) 2> temp.log || touch temp.err
 	@if test -e temp.err; \
@@ -90,16 +100,92 @@ $(OBJS): $(OBJDIR)/%.o : $(SRCDIR)/%.cpp
 	fi;
 	@$(RM) -f temp.log temp.err
 
+
+
+$(EXTERNAL_ROOT)/lib/libBox2D.a:
+	@$(ECHO) -n "Compiling Box2D ...  "
+	@cd $(PROJECT_ROOT)/external/src/ ; tar zxvf Box2D.tgz
+	@cd $(PROJECT_ROOT)/external/src/Box2D ; mkdir build296
+	@cd $(PROJECT_ROOT)/external/src/Box2D/build296 ; cmake ../ ; make ; make install
+
+
+
+
+report:
+	@latex $(DOCDIR)/report.tex
+	@bibtex report.aux
+	@latex $(DOCDIR)/report.tex
+	@latex $(DOCDIR)/report.tex
+	@dvipdf $(PROJECT_ROOT)/report.dvi $(DOCDIR)/report.pdf	
+	@$(RM) -rf  $(PROJECT_ROOT)/report.*
+	@python3 $(SCRIPTDIR)/g12_gen_html.py
+
+
+
 doc:
 	@$(ECHO) -n "Generating Doxygen Documentation ...  "
 	@$(RM) -rf doc/html
 	@$(DOXYGEN) $(DOCDIR)/Doxyfile 2 > /dev/null
 	@$(ECHO) "Done"
 
+
+
 clean:
 	@$(ECHO) -n "Cleaning up..."
-	@$(RM) -rf $(OBJDIR) *~ $(DEPS) $(SRCDIR)/*~
-	@$(ECHO) "Done"
+	@$(RM) -rf $(OBJDIR) *~ $(DEPS) $(SRCDIR)/*~ $(DOCDIR)/*.log $(DOCDIR)/*.dvi $(DOCDIR)/*.aux 
+	@$(RM) -rf $(DOCDIR)/*.pdf $(DOCDIR)/*.ps $(DOCDIR)/*html $(DOCDIR)/html $(BINDIR) $(PROJECT_ROOT)/data $(PROJECT_ROOT)/plots
+	@$(RM) -rf $(PROJECT_ROOT)/*.aux $(PROJECT_ROOT)/*.log $(PROJECT_ROOT)/*.bbl $(PROJECT_ROOT)/*.blg $(PROJECT_ROOT)/*.dvi $(PROJECT_ROOT)/*.pdf	
+	@$(ECHO) "Done" 
+
+
+
+
 
 distclean: clean
-	@$(RM) -rf $(BINDIR) $(DOCDIR)/html
+	@$(RM) -rf $(EXTERNAL_ROOT)/lib/* $(EXTERNAL_ROOT)/include/* $(EXTERNAL_ROOT)/src/Box2D
+	@$(RM) -rf $(INSTALL_PATH)
+
+
+
+dist: distclean
+	@$(RM) -rf ../cs296_g12_project.tar.gz
+	@tar zcvf ../cs296_g12_project.tar.gz ../cs296_base_code
+
+
+
+install: report doc setup $(BINDIR)/$(TARGET)
+	@$(RM) -rf $(INSTALL_PATH)
+	@mkdir -p $(INSTALL_PATH)
+	@mkdir -p $(INSTALL_PATH)/bin
+	@cp $(BINDIR)/$(TARGET) $(INSTALL_PATH)/bin/$(TARGET)
+	@cp -r $(DOCDIR) $(INSTALL_PATH)/doc
+	@$(RM) -rf $(INSTALL_PATH)/doc/Doxyfile $(INSTALL_PATH)/doc/*.tex $(INSTALL_PATH)/doc/*.fdb_latexmk 
+	
+
+
+
+plots: setup Rename $(BINDIR)/$(TARGET) 
+	@$(ECHO) -n "Generating csv..."
+	@python3 $(SCRIPTDIR)/g12_gen_csv.py
+	@$(ECHO) -n "Done"	
+	@python3 $(SCRIPTDIR)/g12_gen_plots.py
+	@mv $(SRCDIR)/main.b $(SRCDIR)/main.c
+	@mv $(SRCDIR)/main.cpp $(SRCDIR)/main.b
+	@mv $(SRCDIR)/main.c $(SRCDIR)/main.cpp
+			
+
+
+Rename:
+	@mv $(SRCDIR)/main.b $(SRCDIR)/main.c
+	@mv $(SRCDIR)/main.cpp $(SRCDIR)/main.b
+	@mv $(SRCDIR)/main.c $(SRCDIR)/main.cpp
+	@$(RM) -rf $(BINDIR)/$(TARGET)
+	@$(RM) -rf $(OBJDIR)/*.o
+
+
+
+
+
+
+
+
