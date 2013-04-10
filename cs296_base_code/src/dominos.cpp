@@ -1095,6 +1095,9 @@ namespace cs296
 \n
 \b <1 The person , consisting of head ,feet legs. 
            The head is essentially a circular head attached to a small horizontal bar.
+           The legs are rectangular horizontal bars.
+           The feet is a small rectangular inclined bar attached to the left end point of legs.
+
 
 \a head : An object of class b2Body, holds the circular part of the head of the person. $headbd is used to give it body definitions. 
 		\t Fixture definitions are taken from $headBfd , $headCfd
