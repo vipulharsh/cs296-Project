@@ -1,0 +1,10 @@
+bin
+doc
+external
+git
+Makefile
+obj
+README.txt
+README.txt~
+scripts
+src
